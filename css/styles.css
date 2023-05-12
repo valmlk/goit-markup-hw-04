@@ -127,6 +127,7 @@ body {
   border-bottom: 1px solid var(--accent-color);
   display: flex;
   align-items: center;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -148,13 +149,16 @@ body {
 
 .hero {
   background-color: var(--dark-color);
-  width: 1440px;
+  max-width: 1440px;
   margin: auto;
   padding-top: 188px;
   padding-bottom: 188px;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office.jpg);
     background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+
 }
 
 .hero-title {
@@ -296,13 +300,14 @@ body {
 }
 
 .employees-description {
-  padding: 32px 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .social-list {
   display: flex;
   justify-content: center;
-  column-gap: 24px;
+  gap: 24px;
 }
 
 .social-list-link {
@@ -319,6 +324,10 @@ background-color: var(--primary-brand-color);
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--pressed-state-color);
+}
+
+.social-list-icon {
+  fill: var(--light-color);
 }
 
 .customers {
@@ -338,7 +347,7 @@ background-color: var(--primary-brand-color);
 
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.1;
   color: var(--dark-color);
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -354,6 +363,7 @@ display: flex;
   align-items: center;
 width: 168px;
 height: 88px;
+color: var(--subtle-text-color);
 }
 
 .customers-item-link:hover,
@@ -362,10 +372,11 @@ height: 88px;
 .customers-item-link:focus customers-icon {
   fill: var(--pressed-state-color);
   border-color: var(--pressed-state-color);
+  color: var(--pressed-state-color);
 }
 
 .customers-icon {
-  fill: var(--subtle-text-color);
+  fill: currentColor;
 }
 
 .footer {
@@ -378,7 +389,11 @@ height: 88px;
 
 .footer-container {
   display: flex;
-  gap: 120px;
+  align-items: baseline
+}
+
+.footer-information {
+  margin-right: 120px;
 }
 
 .footer-text {
@@ -393,8 +408,8 @@ height: 88px;
 
 .footer-social-title {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--white-background-color);
   margin-bottom: 16px;
@@ -413,6 +428,10 @@ height: 88px;
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary-brand-color);
+}
+
+.footer-social-list-icon {
+  fill: var(--light-color) ;
 }
 
 .footer-socail-list-link:hover,
@@ -479,6 +498,10 @@ height: 88px;
   color: var(--dark-color);
 }
 
+.works-item-link {
+  display: block;
+}
+
 .works-description {
   color: var(--body-text-color);
 }
@@ -490,7 +513,7 @@ height: 88px;
   border-top: none;
 }
 
-.works-item-text:hover,
-.works-item-text:focus {
+.works-item-link:hover,
+.works-item-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
